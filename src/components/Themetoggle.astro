@@ -57,8 +57,11 @@ const themeToggle = document.getElementById('themeToggle')
 const themeCircle1 = document.querySelector('.theme_toggle_circle1')
 const themeCircle2 = document.querySelector('.theme_toggle_circle2')
 const toogleThemeCircle = () => {
-  const darkMode = document.documentElement.classList.contains('dark') ?? localStorage.getItem('theme') === 'dark'
+  const darkMode = document.documentElement.classList.contains('dark') ??  localStorage.getItem('theme') === 'dack'
+
+  
   if (darkMode) {
+    console.log("e3456y")
     themeCircle1.setAttribute('r', '9')
     themeCircle2.setAttribute('r', '9')
   } else {
@@ -69,10 +72,13 @@ const toogleThemeCircle = () => {
 
 const listenColorSchema = () => {
   const colorSchema = window.matchMedia('(prefers-color-scheme: dark)')
+  
   colorSchema.addEventListener('change', () => {
     document.documentElement.classList.toggle('dark', colorSchema.matches)
     toogleThemeCircle()
   })
+   const element = document.documentElement
+  element.classList.toggle('dark')
 }
 
 listenColorSchema()
