@@ -250,7 +250,7 @@ export default () => {
             rows="1"
             class="gen-textarea"
           />
-          <button onClick={handleButtonClick} disabled={systemRoleEditing()} gen-slate-btn>
+          <button style="font-size:12px" onClick={handleButtonClick} disabled={systemRoleEditing()} gen-slate-btn>
             发送
           </button>
           <button title="Clear" onClick={clear} disabled={systemRoleEditing()} gen-slate-btn>
